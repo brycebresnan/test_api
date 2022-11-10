@@ -3,7 +3,8 @@ class QuotesController < ApplicationController
 
 
   def index
-    @quotes = {"quotation": "If we dont close tonight we can't open tomorrow."}
+    name = params[:name]
+    @quotes = Quote.search(name)
     json_response(@quotes)
   end
 

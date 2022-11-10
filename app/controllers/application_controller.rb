@@ -11,5 +11,5 @@ class ApplicationController < ActionController::API
 
   def routing_error(error = 'Routing error', status = :not_found, exception=nil)
     json_response({message: error}, status)
- end
+  end
 end
